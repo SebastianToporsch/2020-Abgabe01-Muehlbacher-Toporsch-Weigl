@@ -1,7 +1,7 @@
 # Software Configuration Managment Exercise 01
 
-#### In this exercise we learned how to work with Github and how to effectively commit and push. Especially when it comes to working together on a Java project. At first we distributed the rolls and talked about what classes and subclasses we should implement.
-#### We agreed on the following classes:
+In this exercise we learned how to work with Github and how to effectively commit and push. Especially when it comes to working together on a Java project. At first we distributed the rolls and talked about what classes and subclasses we should implement.
+We agreed on the following classes:
 
 ## Class 1
 
