@@ -1,7 +1,7 @@
 ## Übung Testen Abgabe 01
 
-
-### Markdown
+### In dieser Übung beschäftigten wir uns mit dem Arbeiten über Git.
+### Besonderen Fokus wurde auf das Pushen und Pullen gelegt.
 
 
 # Header 1
