@@ -1,12 +1,11 @@
 # Übung Testen Abgabe 01
 
-#### In dieser Übung beschäftigten wir uns mit dem Arbeiten über Git.
-#### Besonderen Fokus wurde auf das Pushen und Pullen gelegt.
+#### In dieser Übung beschäftigten wir uns mit dem Arbeiten über Git. \nBesonderen Fokus wurde auf das Pushen und Pullen gelegt.
 
 
 ## Klasse 1
 
-## Klasse 2
+## Klasse 2 
 
 
 - Bulleted
