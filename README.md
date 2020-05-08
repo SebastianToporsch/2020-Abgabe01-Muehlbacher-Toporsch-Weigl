@@ -4,23 +4,29 @@
 #### We agreed on the following classes:
 
 ## Class 1
+
 ### This class should:
 - Task 1
+
 - Task 2
+
 #### It has the following sublclasses:
  1. Subclass 1:
 
  2. Sublcass 2:
 
 ## Class 2
+
 ### This class should:
 - Task 1
+
 - Task 2
+
 #### It has the following sublclasses:
  1. Subclass 1:
 
  2. Sublcass 2:
- 
+
 
 [//]: # (1. Numbered)
 [//]: # (2. List)
