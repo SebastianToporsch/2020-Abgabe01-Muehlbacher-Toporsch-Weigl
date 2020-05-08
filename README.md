@@ -13,11 +13,11 @@ were taken in continuously over that duration of time.
 #### It has the following sublclasses:
  1. VodkaLongDrink
 
-creates a drink that is a LongDrink containing Vodka.
+    Creates a drink that is a LongDrink containing Vodka.
 
  2. VodkaShot
 
-creates a Shot that is pure Vodka.
+    Creates a Shot that is pure Vodka.
 
 ## Class 2
 
