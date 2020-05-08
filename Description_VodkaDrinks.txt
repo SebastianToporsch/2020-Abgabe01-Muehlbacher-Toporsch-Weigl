@@ -5,5 +5,10 @@ Class: VodkaDrink
 Subclass 1: VodkaLongdrink
 Subclass 2: VodkaShot
 
-The class VodkaDrink is a subclass of SimpleDrink and the superclass of VodkaLongdrink and VodkaShot. VodkaShot represents pure vodka, while VodkaLongdrink represents a longdrink. VodkaDrink can calculate and return the effect of several vodka drinks on the human body, given size, weight, gender and duration of intake, assuming that the drinks were taken in continuously over that duration of time.
+The class VodkaDrink is a subclass of SimpleDrink and the superclass of VodkaLongdrink
+and VodkaShot. VodkaShot represents pure vodka, while VodkaLongdrink represents a 
+longdrink. VodkaDrink can calculate and return the effect of several vodka drinks on the
+human body, given size, weight, gender and duration of intake, assuming that the drinks
+were taken in continuously over that duration of time.
+
 
