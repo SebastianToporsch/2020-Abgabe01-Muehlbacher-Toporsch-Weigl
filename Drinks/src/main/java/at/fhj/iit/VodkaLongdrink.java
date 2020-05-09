@@ -21,8 +21,14 @@ public class VodkaLongdrink extends VodkaDrink{
      * Creates new longdrink with given name and liquids.
      * Mixes the two given liquids into a new one.
      *
+     * @param name name of the drink
+     * @param vodka represents the vodka part of the longdrink
+     * @param filler represents the filler part of the longdrink
      */
     public VodkaLongdrink(String name, Liquid vodka, Liquid filler){
-        
+        super(name, new Liquid(name, vodka.getVolume()+filler.getVolume(),
+                (vodka.getAlcoholPercent() * vodka.getVolume())/(vodka.getVolume()+filler.getVolume())));
+        this.vodka = vodka;
+        this.filler = filler;
     }
 }
