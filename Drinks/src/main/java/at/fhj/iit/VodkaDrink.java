@@ -6,7 +6,7 @@ package at.fhj.iit;
  * that represents a liquid.
  * <p>
  * VodkaDrink is used to calculate the effects of alcoholic vodka drinks
- * on the human body, based on size, weight, gender and duration of intake,
+ * on the human body, based on weight, gender and duration of intake,
  * given that drinks were taken in consecutively over that duration of time.
  *
  * @author Tobias Weigl
@@ -26,7 +26,7 @@ public abstract class VodkaDrink extends SimpleDrink{
 
     /**
      * Takes a list of vodka drinks and calculates the effects of that
-     * list of alcoholic drinks on the human body, based on size, weight,
+     * list of alcoholic drinks on the human body, based on weight,
      * gender and duration of intake.
      */
     public static String calculateEffects(){
