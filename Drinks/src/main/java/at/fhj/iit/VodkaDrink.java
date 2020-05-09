@@ -13,8 +13,15 @@ package at.fhj.iit;
  * @version %I%, %G%
  */
 public abstract class VodkaDrink extends SimpleDrink{
+    /**
+     * name of the drink
+     */
     private String name;
+    /**
+     * liquid in the drink
+     */
     private Liquid l;
+
     /**
      * Constructor for vodka drinks.
      *
