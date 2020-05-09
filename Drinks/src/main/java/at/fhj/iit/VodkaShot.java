@@ -1,7 +1,7 @@
 package at.fhj.iit;
 
 /**
- * VodkaShot is a class that extends VodkaDrink.
+ * VodkaShot is a class, that extends VodkaDrink.
  * It represents a pure vodka shot.
  *
  * @author Tobias Weigl
