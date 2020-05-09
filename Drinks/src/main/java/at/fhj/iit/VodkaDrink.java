@@ -1,5 +1,7 @@
 package at.fhj.iit;
 
+import java.util.ArrayList;
+
 /**
  * VodkaDrink is the base abstract class for all vodka drinks.
  * It is derived from the SimpleDrinks class and holds a Liquid object,
@@ -28,8 +30,12 @@ public abstract class VodkaDrink extends SimpleDrink{
      * Takes a list of vodka drinks and calculates the effects of that
      * list of alcoholic drinks on the human body, based on weight,
      * gender and duration of intake.
+     *
+     * @param gender gender of the person which effects are being calculated
+     * @param weight weight of the person which effects are being calculated
+     * @param list list of drinks that were taken in
      */
-    public static String calculateEffects(){
+    public static String calculateEffects(Gender gender, int weight, ArrayList<VodkaDrink> list){
         return null;
     }
 
@@ -39,5 +45,5 @@ public abstract class VodkaDrink extends SimpleDrink{
  * Enum for different genders
  */
 enum Gender{
-
+    MALE, FEMALE
 }
