@@ -17,6 +17,9 @@ public abstract class VodkaDrink extends SimpleDrink{
     private Liquid l;
     /**
      * Constructor for vodka drinks.
+     *
+     * @param name name of the drink
+     * @param l liquid in drink
      */
     public VodkaDrink(String name, Liquid l){
         super(name, l);
