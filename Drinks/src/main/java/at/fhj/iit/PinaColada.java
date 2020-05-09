@@ -39,12 +39,18 @@ public class PinaColada extends CocktailDrink {
      *
      */
     public PinaColada(String name, double lemonJuice, double coconutCream, double whippedCream, double rum, double pineappleJuice) {
+
         super(name);
-        this.lemonJuice = lemonJuice;
-        this.coconutCream = coconutCream;
-        this.whippedCream = whippedCream;
-        this.rum = rum;
-        this.pineappleJuice = pineappleJuice;
+
+        try{
+            this.lemonJuice = Math.abs(lemonJuice);
+            this.coconutCream = Math.abs(coconutCream);
+            this.whippedCream = Math.abs(whippedCream);
+            this.rum = Math.abs(rum);
+            this.pineappleJuice = Math.abs(pineappleJuice);
+        } catch (IllegalArgumentException ie){
+            System.out.println("Use double for ingredients please!");
+        }
     }
 
     /**
@@ -60,7 +66,7 @@ public class PinaColada extends CocktailDrink {
      * @return the volume of drink in liter
      */
     public double getVolume() {
-        return 0;
+        return lemonJuice + coconutCream + whippedCream + rum + pineappleJuice;
     }
 
     /**
@@ -69,6 +75,15 @@ public class PinaColada extends CocktailDrink {
      * @return alcohol volume percent (e.g. 50)
      */
     public double getAlcoholPercent() {
+
+        if (isAlcoholic()){
+            try {
+                return 40*rum / getVolume();
+            } catch (ArithmeticException ae){
+                return 0;
+            }
+        }
+
         return 0;
     }
 
@@ -78,7 +93,7 @@ public class PinaColada extends CocktailDrink {
      * @return true when alcoholic liquids are present, otherwise false
      */
     public boolean isAlcoholic() {
-        return false;
+        return rum > 0.0;
     }
 
     /**
@@ -87,6 +102,6 @@ public class PinaColada extends CocktailDrink {
      * @return the calories of drink
      */
     public double getCalories(){
-        return 0;
+        return lemonJuice*2.6 + coconutCream*10.6 + whippedCream*34.8 + rum*22.0 + pineappleJuice*5.6;
     }
 }

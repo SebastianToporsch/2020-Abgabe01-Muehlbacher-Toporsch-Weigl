@@ -51,14 +51,21 @@ public class LongIslandIceTea extends CocktailDrink{
      *
      */
     public LongIslandIceTea(String name, double vodka, double tequila, double rum, double gin, double lemonJuice, double cola, double sugarSyrup) {
+
         super(name);
-        this.vodka = vodka;
-        this.tequila = tequila;
-        this.rum = rum;
-        this.gin = gin;
-        this.lemonJuice = lemonJuice;
-        this.cola = cola;
-        this.sugarSyrup = sugarSyrup;
+
+        try{
+            this.vodka = Math.abs(vodka);
+            this.tequila = Math.abs(tequila);
+            this.rum = Math.abs(rum);
+            this.gin = Math.abs(gin);
+            this.lemonJuice = Math.abs(lemonJuice);
+            this.cola = Math.abs(cola);
+            this.sugarSyrup = Math.abs(sugarSyrup);
+        } catch (IllegalArgumentException ie){
+            System.out.println("Use double for ingredients please!");
+        }
+
     }
 
     /**
@@ -74,7 +81,7 @@ public class LongIslandIceTea extends CocktailDrink{
      * @return the volume of drink in liter
      */
     public double getVolume() {
-        return 0;
+        return vodka + tequila + rum + gin + lemonJuice + cola + sugarSyrup;
     }
 
     /**
@@ -83,6 +90,15 @@ public class LongIslandIceTea extends CocktailDrink{
      * @return alcohol volume percent (e.g. 50)
      */
     public double getAlcoholPercent() {
+
+        if (isAlcoholic()){
+            try {
+                return (40*vodka + 38*tequila + 40*rum + 47*gin) / getVolume();
+            } catch (ArithmeticException ae){
+                return 0;
+            }
+        }
+
         return 0;
     }
 
@@ -92,7 +108,7 @@ public class LongIslandIceTea extends CocktailDrink{
      * @return true when alcoholic liquids are present, otherwise false
      */
     public boolean isAlcoholic() {
-        return false;
+        return vodka > 0.0 || tequila > 0.0 || rum > 0.0 || gin > 0.0;
     }
 
     /**
@@ -101,6 +117,6 @@ public class LongIslandIceTea extends CocktailDrink{
      * @return the calories of drink
      */
     public double getCalories(){
-        return 0;
+        return vodka*21.7 + tequila*21.3 + rum*22.0 + gin*24.7 + lemonJuice*2.6 + cola*4.2 + sugarSyrup*33.6;
     }
 }
