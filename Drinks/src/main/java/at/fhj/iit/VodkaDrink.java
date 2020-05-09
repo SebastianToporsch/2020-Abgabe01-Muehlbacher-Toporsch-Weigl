@@ -13,7 +13,7 @@ package at.fhj.iit;
  * @version %I%, %G%
  */
 public abstract class VodkaDrink extends SimpleDrink{
-    
+
     /**
      * Constructor for vodka drinks.
      *
@@ -29,15 +29,15 @@ public abstract class VodkaDrink extends SimpleDrink{
      * list of alcoholic drinks on the human body, based on size, weight,
      * gender and duration of intake.
      */
-    public static VodkaEffects calculateEffects(){
+    public static String calculateEffects(){
         return null;
     }
 
 }
 
 /**
- * Enum for returning the effects of vodka drinks on the human body.
+ * Enum for different genders
  */
-enum VodkaEffects{
+enum Gender{
 
 }
