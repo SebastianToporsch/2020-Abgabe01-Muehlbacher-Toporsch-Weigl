@@ -12,12 +12,15 @@ package at.fhj.iit;
  * @author Tobias Weigl
  * @version %I%, %G%
  */
-public abstract class VodkaDrink {
-
+public abstract class VodkaDrink extends SimpleDrink{
+    private String name;
+    private Liquid l;
     /**
      * Constructor for vodka drinks.
      */
-    public VodkaDrink(){}
+    public VodkaDrink(String name, Liquid l){
+        super(name, l);
+    }
 
     /**
      * Takes a list of vodka drinks and calculates the effects of that
