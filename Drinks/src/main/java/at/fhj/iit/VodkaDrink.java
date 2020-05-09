@@ -12,5 +12,27 @@ package at.fhj.iit;
  * @author Tobias Weigl
  * @version %I%, %G%
  */
-public class VodkaDrink {
+public abstract class VodkaDrink {
+
+    /**
+     * Constructor for vodka drinks.
+     */
+    public VodkaDrink(){}
+
+    /**
+     * Takes a list of vodka drinks and calculates the effects of that
+     * list of alcoholic drinks on the human body, based on size, weight,
+     * gender and duration of intake.
+     */
+    public static VodkaEffects calculateEffects(){
+        return null;
+    }
+
+}
+
+/**
+ * Enum for returning the effects of vodka drinks on the human body.
+ */
+enum VodkaEffects{
+
 }
