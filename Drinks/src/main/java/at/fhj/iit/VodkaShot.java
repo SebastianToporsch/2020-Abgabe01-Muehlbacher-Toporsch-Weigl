@@ -7,9 +7,13 @@ package at.fhj.iit;
  * @author Tobias Weigl
  * @version %I%, %G%
  */
-public class VodkaShot {
+public class VodkaShot extends VodkaDrink{
     /**
-     * Constructor for VodkaShot
+     * Creates vodka shot with given name and liquid
+     *
+     * @param l represents liquid in the drink
      */
-    public VodkaShot(){}
+    public VodkaShot(Liquid l){
+        super("Vodka Shot", l);
+    }
 }
