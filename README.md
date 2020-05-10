@@ -19,18 +19,21 @@ were taken in continuously over that duration of time.
 
     Creates a Shot that is pure Vodka.
 
-## Class 2
+## CocktailDrink
 
 ### This class should:
-- Task 1
+- Calculate how many calories a given cocktail contains based on the amount of ingredients it contains.
 
 - Task 2
 
 #### It has the following sublclasses:
- 1. Subclass 1:
+ 1. PinaColada:
 
- 2. Sublcass 2:
+    Creates a Pina Colada with lemonJuice, coconutCream, whippedCream, rum & pineappleJuice.
 
+ 2. LongIslandIceTea:
+
+    Creates a Long Island Ice Tea with vodka, tequila, rum, gin, lemonJuice, cola & sugarSyrup
 
 [//]: # (1. Numbered)
 [//]: # (2. List)
