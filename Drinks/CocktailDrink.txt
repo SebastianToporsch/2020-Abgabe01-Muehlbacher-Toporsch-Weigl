@@ -1,0 +1,11 @@
+CocktailDrink
+
+This class should:
+Calculate how many calories a given cocktail contains based on the amount of ingredients it contains.
+
+It has the following subclasses:
+1. PinaColada
+Creates a Pina Colada with lemonJuice, coconutCream, whippedCream, rum & pineappleJuice.
+
+2. LongIslandIceTea
+Creates a Long Island Ice Tea with vodka, tequila, rum, gin, lemonJuice, cola & sugarSyrup
