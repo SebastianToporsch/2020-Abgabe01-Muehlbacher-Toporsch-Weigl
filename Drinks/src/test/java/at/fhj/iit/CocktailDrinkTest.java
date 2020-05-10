@@ -7,8 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Testing CocktailDrink implementation")
 class CocktailDrinkTest {
-
     @Test
     void getCalories() {
+
     }
 }
