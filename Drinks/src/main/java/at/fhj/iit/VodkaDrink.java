@@ -59,7 +59,7 @@ public abstract class VodkaDrink extends SimpleDrink{
         }else if(alcoholBloodPercentage > 0.1){
             return "Drunk";
 
-        }else if(alcoholBloodPercentage <= 0.05){
+        }else if(alcoholBloodPercentage > 0.05){
             return "No driving";
 
         }else if(alcoholBloodPercentage > 0.02){
