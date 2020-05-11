@@ -10,16 +10,28 @@ package at.fhj.iit;
 public class VodkaLongdrink extends VodkaDrink{
 
     /**
+     * Mixes two liquids and returns the new liquid.
+     *
+     * @param name name of the new liquid.
+     * @param vodka represents the vodka part of the drink.
+     * @param filler represents the filler part of the drink.
+     * @return new Liquid, that is a mix of vodka and filler.
+     */
+    public static Liquid createMix(String name, Liquid vodka, Liquid filler){
+        if(vodka.getVolume()+filler.getVolume() < 0.0001){
+            throw new ArithmeticException("Drinks have to have a volume");
+        }
+        return new Liquid(name, vodka.getVolume()+filler.getVolume(),
+                (vodka.getAlcoholPercent() * vodka.getVolume())/(vodka.getVolume()+filler.getVolume()));
+    }
+    /**
      * Creates new longdrink with given name and liquids.
      * Mixes the two given liquids into a new one.
-     * An exception can occur when vodka and filler have a volume of 0, because of a division by 0.
      *
      * @param name name of the drink
-     * @param vodka represents the vodka part of the longdrink
-     * @param filler represents the filler part of the longdrink
+     * @param mix Liquid that the longdrink is made of
      */
-    public VodkaLongdrink(String name, Liquid vodka, Liquid filler){
-        super(name, new Liquid(name, vodka.getVolume()+filler.getVolume(),
-                (vodka.getAlcoholPercent() * vodka.getVolume())/(vodka.getVolume()+filler.getVolume())));
+    public VodkaLongdrink(String name, Liquid mix){
+        super(name, mix);
     }
 }
