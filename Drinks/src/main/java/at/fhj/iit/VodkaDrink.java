@@ -41,7 +41,7 @@ public abstract class VodkaDrink extends SimpleDrink{
         double gramsOfAlcohol = 0;
         for(VodkaDrink drink : list){
             if(drink.getAlcoholPercent() > 0.0001){
-                gramsOfAlcohol += (double) (drink.getVolume()*1000)/drink.getAlcoholPercent()*0.789;
+                gramsOfAlcohol += (double) (drink.getVolume()*1000)*(drink.getAlcoholPercent()/100)*0.789;
             }
         }
         double alcoholBloodPercentage = (gramsOfAlcohol/((weight*1000) * ((gender==Gender.MALE)?0.68:0.55)))*100;
