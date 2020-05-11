@@ -6,9 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
-
-
 @DisplayName("Testing CocktailDrink implementation")
 class CocktailDrinkTest {
 private CocktailDrink C1;
@@ -30,4 +27,4 @@ private CocktailDrink C2;
         assertEquals(C1.getVolume(),22);
         assertEquals(C2.getVolume(),18.4);
     }
-}
+}s
