@@ -27,4 +27,10 @@ private CocktailDrink C2;
         assertEquals(C1.getVolume(),22);
         assertEquals(C2.getVolume(),18.4);
     }
+
+    @Test
+    void testGetAlcoholPercent(){
+        assertEquals(C1.getAlcoholPercent(),10.909090909090908);
+        assertEquals(C2.getAlcoholPercent(),22.282608695652176);
+    }
 }
