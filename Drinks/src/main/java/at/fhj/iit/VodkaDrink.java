@@ -39,7 +39,9 @@ public abstract class VodkaDrink extends SimpleDrink{
     public static String calculateEffects(int time, Gender gender, int weight, ArrayList<VodkaDrink> list){
         double gramsOfAlcohol = 0;
         for(VodkaDrink drink : list){
-            gramsOfAlcohol += (double) (drink.getVolume()*1000)/drink.getAlcoholPercent()*0.789;
+            if(drink.getAlcoholPercent() > 0.0001){
+                gramsOfAlcohol += (double) (drink.getVolume()*1000)/drink.getAlcoholPercent()*0.789;
+            }
         }
         double alcoholBloodPercentage = (gramsOfAlcohol/((weight*1000) * ((gender==Gender.MALE)?0.68:0.55)))*100;
         alcoholBloodPercentage -= (gender==Gender.MALE)?0.015*(time/60):0.013*(time/60);
