@@ -27,4 +27,4 @@ private CocktailDrink C2;
         assertEquals(C1.getVolume(),22);
         assertEquals(C2.getVolume(),18.4);
     }
-}s
+}
