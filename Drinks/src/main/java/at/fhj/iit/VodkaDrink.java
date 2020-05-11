@@ -44,26 +44,26 @@ public abstract class VodkaDrink extends SimpleDrink{
         double alcoholBloodPercentage = (gramsOfAlcohol/(weight * ((gender==Gender.MALE)?0.68:0.55)))*100;
         alcoholBloodPercentage -= (gender==Gender.MALE)?0.015*(time/60):0.013*(time/60);
 
-        if(alcoholBloodPercentage > 0.02){
-            return "Tipsy";
-        }
-        else if(alcoholBloodPercentage > 0.05){
-            return "No driving";
-        }
-        else if(alcoholBloodPercentage > 0.1){
-            return "Drunk";
-        }
-        else if(alcoholBloodPercentage > 0.2){
-            return "Very drunk";
-        }
-        else if(alcoholBloodPercentage > 0.3){
-            return "Alcohol poisoning";
-        }
-        else if(alcoholBloodPercentage > 0.4){
-            return "Probably dead";
-        }
-        else if(alcoholBloodPercentage > 0.5){
+        if(alcoholBloodPercentage > 0.5) {
             return "You dead";
+
+        }else if(alcoholBloodPercentage > 0.4) {
+            return "Probably dead";
+
+        } else if(alcoholBloodPercentage > 0.3) {
+            return "Alcohol poisoning";
+
+        }else if(alcoholBloodPercentage > 0.2){
+            return "Very drunk";
+
+        }else if(alcoholBloodPercentage > 0.1){
+            return "Drunk";
+
+        }else if(alcoholBloodPercentage <= 0.05){
+            return "No driving";
+
+        }else if(alcoholBloodPercentage > 0.02){
+            return "Tipsy";
         }
         return "You good";
 
