@@ -24,7 +24,7 @@ private CocktailDrink C6;
         C5 = new PinaColada("",5,5,5,5,5);
         C6 = new LongIslandIceTea("",5,5,5,5,5,5,5);
     }
-    
+
     @Test
     void testGetCalories() {
         assertEquals(C1.getCalories(),294.0);
