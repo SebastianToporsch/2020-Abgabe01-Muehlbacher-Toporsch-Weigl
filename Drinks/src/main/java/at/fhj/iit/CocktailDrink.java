@@ -12,11 +12,41 @@ public abstract class CocktailDrink extends Drink {
     }
 
     /**
+     * Calculates and returns volume of drink
+     *
+     * @return the volume of drink in liter
+     */
+    public double getVolume(LongIslandIceTea liit){
+
+        double sum = 0;
+
+        for (int i = 0; i < liit.ingredients.size(); i++){
+            sum += liit.ingredients.get(i);
+        }
+
+        return sum;
+    }
+
+    /**
+     * Calculates and returns volume of drink
+     *
+     * @return the volume of drink in centiliter
+     */
+    public double getVolume(PinaColada pc){
+
+        double sum = 0;
+
+        for (int i = 0; i < pc.ingredients.size(); i++){
+            sum += pc.ingredients.get(i);
+        }
+
+        return sum;
+    }
+
+    /**
      * Calculates and returns calories of drink
      *
      * @return the calories of drink
      */
-    public double getCalories(){
-        return 0;
-    }
+    public abstract double getCalories();
 }

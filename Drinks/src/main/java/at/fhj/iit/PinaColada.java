@@ -1,6 +1,13 @@
 package at.fhj.iit;
 
+import java.util.ArrayList;
+
 public class PinaColada extends CocktailDrink {
+
+    /**
+     * List of all the ingredients
+     */
+    public ArrayList<Double> ingredients = new ArrayList<Double>();
 
     /**
      * amount of lemon juice in centiliter
@@ -8,9 +15,45 @@ public class PinaColada extends CocktailDrink {
     private double lemonJuice = 2.0;
 
     /**
+     * Getter for lemonJuice
+     *
+     * @return lemonJuice amount of liquid
+     */
+    public double getLemonJuice() {
+        return lemonJuice;
+    }
+
+    /**
+     * Setter for lemonJuice
+     *
+     * @param lemonJuice new name
+     */
+    public void setLemonJuice(double lemonJuice) {
+        this.lemonJuice = lemonJuice;
+    }
+
+    /**
      * amount of coconut cream in centiliter
      */
     private double coconutCream = 4.0;
+
+    /**
+     * Getter for coconutCream
+     *
+     * @return coconutCream amount of liquid
+     */
+    public double getCoconutCream() {
+        return coconutCream;
+    }
+
+    /**
+     * Setter for coconutCream
+     *
+     * @param coconutCream new name
+     */
+    public void setCoconutCream(double coconutCream) {
+        this.coconutCream = coconutCream;
+    }
 
     /**
      * amount of whipped cream in centiliter
@@ -18,14 +61,68 @@ public class PinaColada extends CocktailDrink {
     private double whippedCream = 2.0;
 
     /**
+     * Getter for whippedCream
+     *
+     * @return whippedCream amount of liquid
+     */
+    public double getWhippedCream() {
+        return whippedCream;
+    }
+
+    /**
+     * Setter for whippedCream
+     *
+     * @param whippedCream new name
+     */
+    public void setWhippedCream(double whippedCream) {
+        this.whippedCream = whippedCream;
+    }
+
+    /**
      * amount of rum in centiliter
      */
     private double rum = 6.0;
 
     /**
+     * Getter for rum
+     *
+     * @return rum amount of liquid
+     */
+    public double getRum() {
+        return rum;
+    }
+
+    /**
+     * Setter for rum
+     *
+     * @param rum new name
+     */
+    public void setRum(double rum) {
+        this.rum = rum;
+    }
+
+    /**
      * amount of pineapple juice in centiliter
      */
     private double pineappleJuice = 8.0;
+
+    /**
+     * Getter for pineappleJuice
+     *
+     * @return pineappleJuice amount of liquid
+     */
+    public double getPineappleJuice() {
+        return pineappleJuice;
+    }
+
+    /**
+     * Setter for pineappleJuice
+     *
+     * @param pineappleJuice new name
+     */
+    public void setPineappleJuice(double pineappleJuice) {
+        this.pineappleJuice = pineappleJuice;
+    }
 
     /**
      * Creates a PinaColada object with given name and the amount of all the ingredients
@@ -51,6 +148,12 @@ public class PinaColada extends CocktailDrink {
         } catch (IllegalArgumentException ie){
             System.out.println("Use double for ingredients please!");
         }
+
+        ingredients.add(lemonJuice);
+        ingredients.add(coconutCream);
+        ingredients.add(whippedCream);
+        ingredients.add(rum);
+        ingredients.add(pineappleJuice);
     }
 
     /**
@@ -63,10 +166,10 @@ public class PinaColada extends CocktailDrink {
     /**
      * Calculates and returns volume of drink
      *
-     * @return the volume of drink in liter
+     * @return the volume of drink in centiliter
      */
     public double getVolume() {
-        return lemonJuice + coconutCream + whippedCream + rum + pineappleJuice;
+        return super.getVolume(this);
     }
 
     /**
