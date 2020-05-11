@@ -28,13 +28,14 @@ class VodkaDrinkTest {
         VodkaE = new VodkaLongdrink("VodkaEnergy", VodkaBottle, Energy);
         VodkaLiquids.add(VS);
         VodkaLiquids.add(VS);
+        VodkaLiquids.add(VS);
 
 
     }
 
     @Test
     void calculateEffects() {
-        assertEquals(VodkaDrink.calculateEffects(90, Gender.MALE, 100, VodkaLiquids), "Tipsy");
+        assertEquals(VodkaDrink.calculateEffects(15, Gender.MALE, 70, VodkaLiquids), "No driving");
         //assertEquals(VodkaDrink.calculateEffects(90, Gender.MALE, 100, VodkaLiquids), "No driving");
 
     }
