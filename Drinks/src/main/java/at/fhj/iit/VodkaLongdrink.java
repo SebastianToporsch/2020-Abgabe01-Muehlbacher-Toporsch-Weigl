@@ -17,7 +17,7 @@ public class VodkaLongdrink extends VodkaDrink{
      * @param filler represents the filler part of the drink.
      * @return new Liquid, that is a mix of vodka and filler.
      */
-    public static Liquid createMix(String name, Liquid vodka, Liquid filler){
+    public static Liquid createMix(String name, VodkaShot vodka, Liquid filler){
         if(vodka.getVolume()+filler.getVolume() < 0.0001){
             throw new ArithmeticException("Drinks have to have a volume");
         }
@@ -25,11 +25,10 @@ public class VodkaLongdrink extends VodkaDrink{
                 (vodka.getAlcoholPercent() * vodka.getVolume())/(vodka.getVolume()+filler.getVolume()));
     }
     /**
-     * Creates new longdrink with given name and liquids.
-     * Mixes the two given liquids into a new one.
+     * Creates new longdrink with given name and liquid.
      *
      * @param name name of the drink
-     * @param mix Liquid that the longdrink is made of
+     * @param mix Liquid that is made out of vodka and another liquid.
      */
     public VodkaLongdrink(String name, Liquid mix){
         super(name, mix);
