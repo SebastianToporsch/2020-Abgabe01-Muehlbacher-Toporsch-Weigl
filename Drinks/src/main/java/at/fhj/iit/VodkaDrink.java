@@ -31,10 +31,11 @@ public abstract class VodkaDrink extends SimpleDrink{
      * list of alcoholic drinks on the human body, based on weight,
      * gender and duration of intake.
      *
-     * @param time duration of intake in minutes
-     * @param gender gender of the person which effects are being calculated
-     * @param weight weight in kilograms of the person which effects are being calculated
-     * @param list list of drinks that were taken in
+     * @param time duration of intake in minutes.
+     * @param gender gender of the person which effects are being calculated.
+     * @param weight weight in kilograms of the person which effects are being calculated.
+     * @param list list of drinks that were taken in.
+     * @return status of the body.
      */
     public static String calculateEffects(int time, Gender gender, int weight, ArrayList<VodkaDrink> list){
         double gramsOfAlcohol = 0;
