@@ -24,10 +24,10 @@ class VodkaDrinkTest {
 
     @BeforeEach
     void setup() {
-        VL = new VodkaLongdrink("TestLongDrink", VodkaBottle, Wasser);
-        VL = new VodkaLongdrink("TestLongDrink2", VodkaBottle,Wein);
+        VL = new VodkaLongdrink("TestLongDrink", VodkaBottle);
+        VL = new VodkaLongdrink("TestLongDrink2", VodkaBottle);
         VS = new VodkaShot(VodkaShot);
-        VodkaE = new VodkaLongdrink("VodkaEnergy", VodkaBottle, Energy);
+        VodkaE = new VodkaLongdrink("VodkaEnergy", VodkaBottle);
         VodkaLiquids.add(VS);
         VodkaLiquids.add(VS);
         VodkaLiquids.add(VS);
