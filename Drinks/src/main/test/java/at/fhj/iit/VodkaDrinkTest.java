@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Testing VodkaDrink implementation")
 class VodkaDrinkTest {
+
     private ArrayList VodkaLiquids = new ArrayList<VodkaDrink>();
     private VodkaDrink VL;
     private VodkaDrink VS;
@@ -18,19 +19,18 @@ class VodkaDrinkTest {
     private Liquid Wasser = new Liquid("Wasser", 0.3, 0);
     private Liquid Wein = new Liquid("Wein", 0.125, 13);
     private Liquid Energy = new Liquid("Energy Drink", 0.33,0);
-    private Liquid VodkaBottle = new Liquid("Vodka Bottle", 0.7, 40);
+    private Liquid VodkaBottle = new Liquid("Vodka Bottle", 0.2, 37.5);
     private Liquid VodkaShot = new Liquid("Vodka Shot", 0.02, 37.5);
 
     @BeforeEach
     void setup() {
         VL = new VodkaLongdrink("TestLongDrink", VodkaBottle, Wasser);
+        VL = new VodkaLongdrink("TestLongDrink2", VodkaBottle,Wein);
         VS = new VodkaShot(VodkaShot);
         VodkaE = new VodkaLongdrink("VodkaEnergy", VodkaBottle, Energy);
         VodkaLiquids.add(VS);
         VodkaLiquids.add(VS);
         VodkaLiquids.add(VS);
-
-
     }
 
     @Test
