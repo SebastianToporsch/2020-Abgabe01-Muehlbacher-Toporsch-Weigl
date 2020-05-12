@@ -166,7 +166,7 @@ public class PinaColada extends CocktailDrink {
     /**
      * Calculates and returns volume of drink
      *
-     * @return the volume of drink in centiliter
+     * @return the volume of drink in liter
      */
     public double getVolume() {
         return super.getVolume(this);
@@ -181,7 +181,7 @@ public class PinaColada extends CocktailDrink {
 
         if (isAlcoholic()){
             try {
-                return 40*rum / getVolume();
+                return 40*rum / getVolume()*100;
             } catch (ArithmeticException ae){
                 return 0;
             }

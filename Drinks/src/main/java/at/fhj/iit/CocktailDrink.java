@@ -30,7 +30,7 @@ public abstract class CocktailDrink extends Drink {
     /**
      * Calculates and returns volume of drink
      *
-     * @return the volume of drink in centiliter
+     * @return the volume of drink in liter
      */
     public double getVolume(PinaColada pc){
 
@@ -40,7 +40,7 @@ public abstract class CocktailDrink extends Drink {
             sum += pc.ingredients.get(i);
         }
 
-        return sum;
+        return sum/100;
     }
 
     /**

@@ -218,7 +218,7 @@ public class LongIslandIceTea extends CocktailDrink{
     /**
      * Calculates and returns volume of drink
      *
-     * @return the volume of drink in centiliter
+     * @return the volume of drink in liter
      */
     public double getVolume() {
         return super.getVolume(this);
@@ -233,7 +233,7 @@ public class LongIslandIceTea extends CocktailDrink{
 
         if (isAlcoholic()){
             try {
-                return (40*vodka + 38*tequila + 40*rum + 47*gin) / getVolume();
+                return (40*vodka + 38*tequila + 40*rum + 47*gin) / getVolume()*100;
             } catch (ArithmeticException ae){
                 return 0;
             }
