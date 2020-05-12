@@ -241,7 +241,7 @@ public class LongIslandIceTea extends CocktailDrink{
 
         if (isAlcoholic()){
             try {
-                return (40*vodka + 38*tequila + 40*rum + 47*gin) / getVolume()*100;
+                return ((40*vodka + 38*tequila + 40*rum + 47*gin) / getVolume()*100)/10000;
             } catch (ArithmeticException ae){
                 return 0;
             }
