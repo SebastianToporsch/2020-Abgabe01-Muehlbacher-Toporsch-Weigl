@@ -160,6 +160,12 @@ public class PinaColada extends CocktailDrink {
      */
     public PinaColada() {
         super("Piña Colada");
+
+        ingredients.add(lemonJuice);
+        ingredients.add(coconutCream);
+        ingredients.add(whippedCream);
+        ingredients.add(rum);
+        ingredients.add(pineappleJuice);
     }
 
     /**

@@ -213,6 +213,14 @@ public class LongIslandIceTea extends CocktailDrink{
      */
     public LongIslandIceTea(){
         super("Long Island Ice Tea");
+
+        ingredients.add(vodka);
+        ingredients.add(tequila);
+        ingredients.add(rum);
+        ingredients.add(gin);
+        ingredients.add(lemonJuice);
+        ingredients.add(cola);
+        ingredients.add(sugarSyrup);
     }
 
     /**
