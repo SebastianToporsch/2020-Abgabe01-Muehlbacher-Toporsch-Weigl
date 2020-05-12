@@ -5,7 +5,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,20 +13,22 @@ class VodkaDrinkTest {
 
     private ArrayList VodkaLiquids = new ArrayList<VodkaDrink>();
     private VodkaDrink VL;
-    private VodkaDrink VS;
+    private VodkaShot VS;
+    private VodkaShot BVS;
     private VodkaDrink VodkaE;
     private Liquid Wasser = new Liquid("Wasser", 0.3, 0);
     private Liquid Wein = new Liquid("Wein", 0.125, 13);
     private Liquid Energy = new Liquid("Energy Drink", 0.33,0);
     private Liquid VodkaBottle = new Liquid("Vodka Bottle", 0.7, 37.5);
     private Liquid VodkaShot = new Liquid("Vodka Shot", 0.02, 37.5);
+    private Liquid BigVodkaShot = new Liquid("Big Vodka Shot",0.08,37.5);
 
     @BeforeEach
     void setup() {
         VL = new VodkaLongdrink("TestLongDrink", VodkaBottle);
-        VL = new VodkaLongdrink("TestLongDrink2", VodkaBottle);
         VS = new VodkaShot(VodkaShot);
-        VodkaE = new VodkaLongdrink("VodkaEnergy", VodkaBottle);
+        BVS = new VodkaShot(BigVodkaShot);
+        VodkaE = new VodkaLongdrink("VodkaE",VodkaLongdrink.createMix("VodkaE",BVS,Energy));
         VodkaLiquids.add(VS);
         VodkaLiquids.add(VS);
         VodkaLiquids.add(VS);
@@ -36,14 +37,36 @@ class VodkaDrinkTest {
     @Test
     void calculateEffects() {
         assertEquals(VodkaDrink.calculateEffects(15, Gender.MALE, 70, VodkaLiquids), "Tipsy");
+        VodkaLiquids.add(VodkaE);
+        assertEquals(VodkaDrink.calculateEffects(15, Gender.MALE, 70, VodkaLiquids), "No driving");
+        VodkaLiquids.add(VodkaE);
+        VodkaLiquids.add(VodkaE);
+        assertEquals(VodkaDrink.calculateEffects(15, Gender.MALE, 70, VodkaLiquids), "Drunk");
+        VodkaLiquids.add(VodkaE);
+        assertEquals(VodkaDrink.calculateEffects(15, Gender.MALE, 70, VodkaLiquids), "Very drunk");
+        VodkaLiquids.add(VodkaE);
+        VodkaLiquids.add(VodkaE);
+        assertEquals(VodkaDrink.calculateEffects(15, Gender.MALE, 70, VodkaLiquids), "Alcohol poisoning");
+        VodkaLiquids.add(VodkaE);
+        VodkaLiquids.add(VodkaE);
+        assertEquals(VodkaDrink.calculateEffects(15, Gender.MALE, 70, VodkaLiquids), "Probably dead");
+        VodkaLiquids.add(VodkaE);
+        VodkaLiquids.add(VodkaE);
+        assertEquals(VodkaDrink.calculateEffects(15, Gender.MALE, 70, VodkaLiquids), "You dead");
+        VodkaLiquids.clear();
 
+        VodkaLiquids.add(VL);
+        assertEquals(VodkaDrink.calculateEffects(60,Gender.FEMALE, 65,VodkaLiquids),"You dead");
+        VodkaLiquids.clear();
+
+        VodkaLiquids.add(VL);
+        assertEquals(VodkaDrink.calculateEffects(60,Gender.MALE,100,VodkaLiquids),"Very drunk");
     }
 
     @Test
     void testGetAlcoholPercent() {
         assertEquals(VL.getAlcoholPercent(), 37.5);
         assertEquals(VS.getAlcoholPercent(), 37.5);
-
     }
 
     @Test
