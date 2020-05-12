@@ -3,7 +3,6 @@ package at.fhj.iit;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Testing CocktailDrink implementation")
@@ -16,6 +15,7 @@ private CocktailDrink C5;
 private CocktailDrink C6;
 
     @BeforeEach
+    @DisplayName("Setting everything up for testing")
     void setup(){
         C1 = new PinaColada();
         C2 = new LongIslandIceTea();
@@ -25,7 +25,9 @@ private CocktailDrink C6;
         C6 = new LongIslandIceTea("",5,5,5,5,5,5,5);
     }
 
+
     @Test
+    @DisplayName("Testing getCalories Method")
     void testGetCalories() {
         assertEquals(C1.getCalories(),294.0);
         assertEquals(C2.getCalories(),282.68000000000006);
@@ -35,7 +37,9 @@ private CocktailDrink C6;
         assertEquals(C6.getCalories(),650.5);
     }
 
+
     @Test
+    @DisplayName("Testing getVolume Method")
     void testGetVolume(){
         assertEquals(C1.getVolume(),22);
         assertEquals(C2.getVolume(),18.4);
@@ -46,6 +50,7 @@ private CocktailDrink C6;
     }
 
     @Test
+    @DisplayName("Testing getAlcoholPercent Method")
     void testGetAlcoholPercent(){
         assertEquals(C1.getAlcoholPercent(),10.909090909090908);
         assertEquals(C2.getAlcoholPercent(),22.282608695652176);
@@ -56,15 +61,18 @@ private CocktailDrink C6;
     }
 
     @Test
+    @DisplayName("Testing names")
     void testName(){
         assertEquals(C1.name,"Piña Colada");
-        assertEquals(C2.name, "Long Island Ice Tea");
+        assertEquals(C2.name,"Long Island Ice Tea");
         assertEquals(C3.name,"Pina");
         assertEquals(C4.name,"Long Island");
         assertEquals(C5.name,"");
         assertEquals(C6.name,"");
     }
+
     @Test
+    @DisplayName("Testing isAlcoholic Method")
     void testAlcoholic(){
         assertEquals(C1.isAlcoholic(),true);
         assertEquals(C2.isAlcoholic(),true);
