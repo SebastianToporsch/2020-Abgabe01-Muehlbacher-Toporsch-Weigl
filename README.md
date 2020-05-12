@@ -35,8 +35,6 @@ double alcoholBloodPercentage = (gramsOfAlcohol/((weight*1000) * ((gender==Gende
 ### This class should:
 - Calculate how many calories a given cocktail contains based on the amount of ingredients it contains.
 
-- Task 2
-
 #### It has the following sublclasses:
  1. **PinaColada**:
 
