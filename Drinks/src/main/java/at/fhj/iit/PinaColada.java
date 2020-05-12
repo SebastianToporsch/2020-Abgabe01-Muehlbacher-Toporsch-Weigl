@@ -186,7 +186,7 @@ public class PinaColada extends CocktailDrink {
 
         if (isAlcoholic()) {
             try {
-                return 40 * rum / getVolume() * 100;
+                return (40 * rum / getVolume() * 100)/10000;
             } catch (ArithmeticException ae) {
                 return 0;
             }
