@@ -67,8 +67,8 @@ private CocktailDrink C6;
      *  Tests if getAlcoholPercent returns the right values
      */
     void testGetAlcoholPercent(){
-        assertEquals(C1.getAlcoholPercent(),10.909090909090908);
-        assertEquals(C2.getAlcoholPercent(),22.282608695652176);
+        assertEquals(C1.getAlcoholPercent(),10.90909090909091);
+        assertEquals(C2.getAlcoholPercent(),22.282608695652175);
         assertEquals(C3.getAlcoholPercent(),0);
         assertEquals(C4.getAlcoholPercent(),0);
         assertEquals(C5.getAlcoholPercent(),8);
