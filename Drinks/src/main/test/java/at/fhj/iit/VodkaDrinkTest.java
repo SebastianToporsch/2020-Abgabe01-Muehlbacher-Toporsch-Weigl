@@ -82,7 +82,10 @@ class VodkaDrinkTest {
 
         assertEquals(EmptyDrink = new VodkaLongdrink("ErrorVodka", VodkaLongdrink.createMix("No mix", VS, Nothing)),EmptyDrink);
 
-        assertEquals(new VodkaLongdrink("ErrorVodka", VodkaLongdrink.createMix("No mix", EmptyShot, Nothing)),0 );
+        ArithmeticException exception = assertThrows(ArithmeticException.class, () -> {
+            EmptyDrink = new VodkaLongdrink("ErrorVodka", VodkaLongdrink.createMix("No mix", EmptyShot, Nothing));
+        });
+        assertEquals(exception.getMessage() ,"Drinks have to have a volume");
 
     }
 
