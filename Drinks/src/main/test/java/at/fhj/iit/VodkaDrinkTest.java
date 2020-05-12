@@ -19,15 +19,15 @@ class VodkaDrinkTest {
     private Liquid Wasser = new Liquid("Wasser", 0.3, 0);
     private Liquid Wein = new Liquid("Wein", 0.125, 13);
     private Liquid Energy = new Liquid("Energy Drink", 0.33,0);
-    private Liquid VodkaBottle = new Liquid("Vodka Bottle", 0.2, 37.5);
+    private Liquid VodkaBottle = new Liquid("Vodka Bottle", 0.7, 37.5);
     private Liquid VodkaShot = new Liquid("Vodka Shot", 0.02, 37.5);
 
     @BeforeEach
     void setup() {
-        VL = new VodkaLongdrink("TestLongDrink", VodkaBottle, Wasser);
-        VL = new VodkaLongdrink("TestLongDrink2", VodkaBottle,Wein);
+        VL = new VodkaLongdrink("TestLongDrink", VodkaBottle);
+        VL = new VodkaLongdrink("TestLongDrink2", VodkaBottle);
         VS = new VodkaShot(VodkaShot);
-        VodkaE = new VodkaLongdrink("VodkaEnergy", VodkaBottle, Energy);
+        VodkaE = new VodkaLongdrink("VodkaEnergy", VodkaBottle);
         VodkaLiquids.add(VS);
         VodkaLiquids.add(VS);
         VodkaLiquids.add(VS);
@@ -35,21 +35,21 @@ class VodkaDrinkTest {
 
     @Test
     void calculateEffects() {
-        assertEquals(VodkaDrink.calculateEffects(15, Gender.MALE, 70, VodkaLiquids), "No driving");
-        //assertEquals(VodkaDrink.calculateEffects(90, Gender.MALE, 100, VodkaLiquids), "No driving");
+        assertEquals(VodkaDrink.calculateEffects(15, Gender.MALE, 70, VodkaLiquids), "Tipsy");
 
     }
 
     @Test
     void testGetAlcoholPercent() {
-        assertEquals(VL.getAlcoholPercent(), 28);
+        assertEquals(VL.getAlcoholPercent(), 37.5);
         assertEquals(VS.getAlcoholPercent(), 37.5);
 
     }
 
     @Test
     void testGetVolume() {
-        assertEquals(VL.getVolume(), 1);
+        assertEquals(VL.getVolume(), 0.7);
+        assertEquals(VS.getVolume(), 0.02);
     }
 
     @Test
