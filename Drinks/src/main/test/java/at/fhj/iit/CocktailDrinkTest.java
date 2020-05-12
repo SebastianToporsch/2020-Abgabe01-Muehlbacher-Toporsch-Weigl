@@ -64,4 +64,13 @@ private CocktailDrink C6;
         assertEquals(C5.name,"");
         assertEquals(C6.name,"");
     }
+    @Test
+    void testAlcoholic(){
+        assertEquals(C1.isAlcoholic(),true);
+        assertEquals(C2.isAlcoholic(),true);
+        assertEquals(C3.isAlcoholic(),false);
+        assertEquals(C4.isAlcoholic(),false);
+        assertEquals(C5.isAlcoholic(),true);
+        assertEquals(C6.isAlcoholic(),true);
+    }
 }
