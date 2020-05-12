@@ -24,7 +24,7 @@ public abstract class CocktailDrink extends Drink {
             sum += liit.ingredients.get(i);
         }
 
-        return sum;
+        return sum/100;
     }
 
     /**
