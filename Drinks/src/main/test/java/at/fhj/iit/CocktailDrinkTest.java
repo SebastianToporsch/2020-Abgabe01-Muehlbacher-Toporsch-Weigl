@@ -53,12 +53,12 @@ private CocktailDrink C6;
      *  Tests if getVolume returns the right Values
      */
     void testGetVolume(){
-        assertEquals(C1.getVolume(),22);
-        assertEquals(C2.getVolume(),18.4);
+        assertEquals(C1.getVolume(),0.22);
+        assertEquals(C2.getVolume(),0.184);
         assertEquals(C3.getVolume(),0);
         assertEquals(C4.getVolume(),0);
-        assertEquals(C5.getVolume(),25);
-        assertEquals(C6.getVolume(),35);
+        assertEquals(C5.getVolume(),0.25);
+        assertEquals(C6.getVolume(),0.35);
     }
 
     @Test
