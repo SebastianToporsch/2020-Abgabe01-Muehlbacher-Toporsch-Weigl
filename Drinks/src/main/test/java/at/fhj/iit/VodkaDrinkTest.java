@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 @DisplayName("Testing VodkaDrink implementation")
 class VodkaDrinkTest {
 
@@ -35,6 +36,11 @@ class VodkaDrinkTest {
 
     @Test
     @DisplayName("Testing calculateEffects Method")
+    /***
+     * Tests all possible stages of drinking Vodka based Liquids
+     * VodkaLiquids List is cleared and it is tested what happens if a man and woman drink an entire bottle of vodka
+     * Furthermore tests what happens when somebody very heavy drinks 3 Vodka bottles
+     */
     void calculateEffects() {
         VodkaLiquids.add(VS);
         VodkaLiquids.add(VS);
@@ -60,9 +66,7 @@ class VodkaDrinkTest {
 
         VodkaLiquids.add(VL);
         assertEquals(VodkaDrink.calculateEffects(60,Gender.FEMALE, 65,VodkaLiquids),"You dead");
-        VodkaLiquids.clear();
 
-        VodkaLiquids.add(VL);
         assertEquals(VodkaDrink.calculateEffects(60,Gender.MALE,100,VodkaLiquids),"Very drunk");
         VodkaLiquids.clear();
 
@@ -78,6 +82,10 @@ class VodkaDrinkTest {
 
     @Test
     @DisplayName("Testing createMix Method")
+    /***
+     * Tests if you can mix a Shot with Nothing, which should be legal
+     * and tests if you can mix a empty Shot with Nothing, which should be illegal
+     */
     void testCreateMix() {
 
         assertEquals(EmptyDrink = new VodkaLongdrink("ErrorVodka", VodkaLongdrink.createMix("No mix", VS, Nothing)),EmptyDrink);
@@ -91,6 +99,9 @@ class VodkaDrinkTest {
 
     @Test
     @DisplayName("Testing getAlcoholPercent Method")
+    /***
+     * Tests if getAlcoholPercent returns the right value
+     */
     void testGetAlcoholPercent() {
         assertEquals(VL.getAlcoholPercent(), 37.5);
         assertEquals(VS.getAlcoholPercent(), 37.5);
@@ -100,6 +111,9 @@ class VodkaDrinkTest {
 
     @Test
     @DisplayName("Testing getVolume Method")
+    /***
+     * Tests if getVolume returns the right value
+     */
     void testGetVolume() {
         assertEquals(VL.getVolume(), 0.7);
         assertEquals(VS.getVolume(), 0.02);
@@ -109,6 +123,9 @@ class VodkaDrinkTest {
 
     @Test
     @DisplayName("Testing isAlcoholic Method")
+    /***
+     * Tests if isAlcoholic returns the right value
+     */
     void testIsAlcoholic() {
         assertEquals(VL.isAlcoholic(), true);
         assertEquals(VS.isAlcoholic(), true);
