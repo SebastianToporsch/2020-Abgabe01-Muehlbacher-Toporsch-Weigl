@@ -50,7 +50,7 @@ double alcoholBloodPercentage = (gramsOfAlcohol/((weight*1000) * ((gender==Gende
 
 Core method getCalories is used to calculate the Calories a given Cocktail(PinaColada or LongIslandIceTea) has
 
-getClories for LongIslandIceTea:
+getCalories for LongIslandIceTea:
   public double getCalories(){
         return vodka*21.7 + tequila*21.3 + rum*22.0 + gin*24.7 + lemonJuice*2.6 + cola*4.2 + sugarSyrup*33.6;
     }
