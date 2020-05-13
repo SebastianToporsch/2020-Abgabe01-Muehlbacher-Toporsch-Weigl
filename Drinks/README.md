@@ -21,7 +21,7 @@ were taken in continuously over that duration of time.
 
 ### Most important code snippet:
 
-```Vodka
+```Java
 
 Formula used to calculate percentage of alcohol in the blood
 
@@ -46,7 +46,7 @@ double alcoholBloodPercentage = (gramsOfAlcohol/((weight*1000) * ((gender==Gende
 
 ### Most important code snippets:
 
-```Cocktail
+```Java
 
 Core method getCalories is used to calculate the Calories a given Cocktail(PinaColada or LongIslandIceTea) has
 
