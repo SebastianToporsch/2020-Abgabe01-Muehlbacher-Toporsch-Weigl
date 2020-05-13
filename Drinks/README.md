@@ -19,7 +19,7 @@ were taken in continuously over that duration of time.
 
     Creates a Shot that is pure Vodka.
 
-### Most impprtant code snippet:
+### Most important code snippet:
 
 ```Vodka
 
@@ -44,7 +44,7 @@ double alcoholBloodPercentage = (gramsOfAlcohol/((weight*1000) * ((gender==Gende
 
     Creates a Long Island Ice Tea with vodka, tequila, rum, gin, lemonJuice, cola & sugarSyrup
 
-### Most impprtant code snippets:
+### Most important code snippets:
 
 ```Cocktail
 
